@@ -3,4 +3,5 @@ UPDATE
 SET
     balance = balance + ?
 WHERE
-    id = ?;
+    id = ?
+    AND password = ?;

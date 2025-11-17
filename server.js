@@ -82,21 +82,6 @@ app.post("/api/balance", (req, res) => {
   });
 });
 
-app.post("/api/deposit", (req, res) => {
-  const { accountId, amount } = req.body;
-  const sql = loadQuery("deposit.sql").split(";");
-  db.run(sql[0], [amount, accountId], function (err) {
-    if (err) return sendError(res, "GENERIC_ERROR", `[DEPOSIT] ${err.message}`);
-    db.run(sql[1], [accountId, amount], (err) => {
-      if (err) console.error(`[TX] ${err.message}`);
-    });
-    getBalance(accountId, (balance) => {
-      if (balance == null) return sendError(res, "BALANCE_FETCH_FAILED");
-      res.send(`Deposited $${amount}. New balance: $${balance}`);
-    });
-  });
-});
-
 app.post("/api/withdraw", (req, res) => {
   const { accountId, bankId, amount, password } = req.body;
   const sql = loadQuery("withdraw.sql").split(";");
