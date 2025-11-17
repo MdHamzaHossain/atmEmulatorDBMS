@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <a href="index.html"> Home</a>
+      <a href="create.html"> Create</a>
+      <a href="balance.html"> Balance</a>
+      <a href="deposit.html"> Deposit</a>
+      <a href="withdraw.html"> Withdraw</a>
+      <a href="transfer.html"> Transfer</a>
+      <a href="loan.html"> Loan</a>
+      <a href="history.html"> History</a>
+    </nav>
+
+    <main class="content-box">
+      <h2>Transaction History</h2>
+      <form onsubmit="getHistory(event)" class="form">
+        <label for="accountId">Account ID</label>
+        <input id="accountId" name="accountId" type="number" required />
+
+        <label for="bankId">Bank ID</label>
+        <input id="bankId" name="bankId" type="number" required />
+
+        <label for="type" class="dropdown-label">Transaction Type</label>
+        <div class="dropdown-container">
+          <select id="type" name="type" class="dropdown-select">
+            <option value="">All Types</option>
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+            <option value="transfer">Transfer</option>
+            <option value="loan">Loan</option>
+          </select>
+          <span class="dropdown-icon">▼</span>
+        </div>
+
+        <button type="submit">View History</button>
+      </form>
+
+      <div id="historyResults" class="results"></div>
+    </main>
+
+    <script src="js/history.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <a href="index.html"> Home</a>
+      <a href="create.html"> Create</a>
+      <a href="balance.html"> Balance</a>
+      <a href="deposit.html"> Deposit</a>
+      <a href="withdraw.html"> Withdraw</a>
+      <a href="transfer.html"> Transfer</a>
+      <a href="loan.html"> Loan</a>
+      <a href="history.html"> History</a>
+    </nav>
+
+    <main class="content-box">
+      <h2>Request a Loan</h2>
+      <form onsubmit="submitLoan(event)" class="form">
+        <label for="accountId">Account ID</label>
+        <input id="accountId" name="accountId" type="number" required />
+
+        <label for="bankId">Bank ID</label>
+        <input id="bankId" name="bankId" type="number" required />
+
+        <label for="amount">Loan Amount</label>
+        <input id="amount" name="amount" type="number" required />
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required />
+
+        <button type="submit">Submit Loan</button>
+      </form>
+
+      <div id="loanResult" class="result"></div>
+    </main>
+
+    <script src="js/loan.js"></script>
+  </body>
+</html>

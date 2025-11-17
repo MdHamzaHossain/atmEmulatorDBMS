@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS bank (
+    id INTEGER PRIMARY KEY,
+    budget INTEGER DEFAULT 10000
+);
+
+INSERT
+    OR IGNORE INTO bank (id, budget)
+VALUES
+    (1, 10000);

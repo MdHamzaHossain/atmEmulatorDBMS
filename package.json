@@ -1,0 +1,18 @@
+{
+  "name": "atmemulator",
+  "version": "0.0.1",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.5",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7",
+    "typescript": "^5.9.3"
+  }
+}

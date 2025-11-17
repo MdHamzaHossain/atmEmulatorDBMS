@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <a href="index.html"> Home</a>
+      <a href="create.html"> Create</a>
+      <a href="balance.html"> Balance</a>
+      <a href="deposit.html"> Deposit</a>
+      <a href="withdraw.html"> Withdraw</a>
+      <a href="transfer.html"> Transfer</a>
+      <a href="loan.html"> Loan</a>
+      <a href="history.html"> History</a>
+    </nav>
+
+    <main class="content-box">
+      <h2>Transfer Funds</h2>
+      <form onsubmit="submitTransfer(event)" class="form">
+        <label for="fromId">Sender Account ID</label>
+        <input id="fromId" name="fromId" type="number" required />
+
+        <label for="toId">Recipient Account ID</label>
+        <input id="toId" name="toId" type="number" required />
+
+        <label for="bankId">Bank ID</label>
+        <input id="bankId" name="bankId" type="number" required />
+
+        <label for="amount">Amount</label>
+        <input id="amount" name="amount" type="number" required />
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required />
+
+        <button type="submit">Submit Transfer</button>
+      </form>
+
+      <div id="transferResult" class="result"></div>
+    </main>
+
+    <script src="js/transfer.js"></script>
+  </body>
+</html>

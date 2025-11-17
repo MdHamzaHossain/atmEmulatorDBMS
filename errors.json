@@ -1,0 +1,9 @@
+{
+  "INVALID_CREDENTIALS": "Invalid credentials",
+  "INSUFFICIENT_FUNDS": "Insufficient funds or error processing transaction",
+  "BANK_FUNDS_EXCEEDED": "Bank does not have enough funds to issue this loan",
+  "ACCOUNT_NOT_FOUND": "Account not found",
+  "BALANCE_FETCH_FAILED": "Failed to fetch account balance",
+  "TX_LOG_FAILED": "Transaction succeeded, but logging failed",
+  "GENERIC_ERROR": "An unexpected error occurred"
+}

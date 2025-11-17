@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM Emulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <a href="index.html"> Home</a>
+      <a href="create.html"> Create</a>
+      <a href="balance.html"> Balance</a>
+      <a href="deposit.html"> Deposit</a>
+      <a href="withdraw.html"> Withdraw</a>
+      <a href="transfer.html"> Transfer</a>
+      <a href="loan.html"> Loan</a>
+      <a href="history.html"> History</a>
+    </nav>
+    <main class="content-box">
+      <h1>Welcome to Your Digital ATM</h1>
+      <p>
+        Manage your finances with ease. Choose an operation from the menu above.
+      </p>
+      <form onsubmit="resetDatabase(event)" class="form">
+        <button type="submit">Reset</button>
+      </form>
+      <div id="resetResult" class="result"></div>
+      <div id="resetResult" class="result"></div>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
