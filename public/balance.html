@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Check Balance</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <nav class="nav-bar">
-    <a href="index.html"> Home</a>
-    <a href="create.html"> Create</a>
-    <a href="balance.html"> Balance</a>
-    <a href="deposit.html"> Deposit</a>
-    <a href="withdraw.html"> Withdraw</a>
-    <a href="transfer.html"> Transfer</a>
-    <a href="loan.html"> Loan</a>
-    <a href="history.html"> History</a>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Balance</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <a href="index.html"> Home</a>
+      <a href="create.html"> Create</a>
+      <a href="balance.html"> Balance</a>
+      <a href="deposit.html"> Deposit</a>
+      <a href="withdraw.html"> Withdraw</a>
+      <a href="transfer.html"> Transfer</a>
+      <a href="loan.html"> Loan</a>
+      <a href="history.html"> History</a>
+    </nav>
 
-  <main class="content-box">
-    <h2>Check Account Balance</h2>
-    <form onsubmit="checkBalance(event)" class="form">
-      <label for="accountId">Account ID</label>
-      <input id="accountId" name="accountId" type="number" required />
+    <main class="content-box">
+      <h2>Check Account Balance</h2>
+      <form onsubmit="checkBalance(event)" class="form">
+        <label for="accountId">Account ID</label>
+        <input id="accountId" name="accountId" type="number" required />
 
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" required />
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required />
 
-      <button type="submit">Check Balance</button>
-    </form>
-  </main>
+        <button type="submit">Check Balance</button>
+      </form>
+    </main>
 
-  <script src="js/balance.js"></script>
-</body>
+    <script src="js/balance.js"></script>
+  </body>
 </html>

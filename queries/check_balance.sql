@@ -1,8 +1,6 @@
 SELECT
-    balance,
-    bank_id
+    balance
 FROM
     accounts
 WHERE
-    id = ?
-    AND password = ?;
+    id = ?;
