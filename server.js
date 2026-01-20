@@ -146,8 +146,8 @@ app.post("/api/transfer", (req, res) => {
       db.run(sql[1], [amount, toId], (err) => {
         if (err) console.error(`[TRANSFER] Credit failed: ${err.message}`);
       });
-      db.run(sql[2], [fromId, bankId, "transfer_out", amount]);
-      db.run(sql[2], [toId, bankId, "transfer_in", amount]);
+      db.run(sql[2], [fromId, bankId, "transfer", amount]);
+      db.run(sql[2], [toId, bankId, "transfer", amount]);
       getBalance(fromId, (balance) => {
         if (balance == null) return sendError(res, "BALANCE_FETCH_FAILED");
         res.send(`Transferred $${amount}. New balance: $${balance}`);
@@ -162,8 +162,7 @@ app.post("/api/history", (req, res) => {
   db.all(sql, [accountId, bankId, type, type], (err, rows) => {
     if (err) return sendError(res, "GENERIC_ERROR", `[HISTORY] ${err.message}`);
     console.log(
-      `[HISTORY] Returned ${
-        rows.length
+      `[HISTORY] Returned ${rows.length
       } entries for ID=${accountId}, BankID=${bankId}, Type=${type || "ALL"}`
     );
     res.json(rows);
@@ -177,6 +176,24 @@ app.post("/api/reset", (req, res) => {
     console.log("[RESET] Database cleared and bank restored");
     res.send("Database reset complete");
   });
+});
+app.post("/api/deposit", (req, res) => {
+  const { accountId, amount } = req.body;
+  console.log("debug", accountId, amount)
+  const sql = loadQuery("deposit.sql");
+  db.run(sql, [amount, accountId], function (err) {
+    if (err || this.changes === 0)
+      return sendError(
+        res,
+        "INVALID CREDENTIALS",
+        `[DEPOSIT] ${err}`
+      );
+
+    getBalance(accountId, (bl, row) => {
+      res.send(`Deposited amount $${amount}. New Balance $${bl}`);
+    })
+  });
+
 });
 
 const PORT = 3000;
