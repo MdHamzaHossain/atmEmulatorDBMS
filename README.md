@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/f51f2528-daea-4551-93de-46ff32969395
 
 
 ## Folder Structure
-```
+```bash
 db/                   # Holds the local database file
 │   └── atm.db
 │
