@@ -16,3 +16,7 @@ A full stack app emulating a barebones site with a database.
 
 <video src="./public/assets/demo/AtmDemo1.mp4" controls="controls" style="max-width: 100%;"></video>
 
+
+https://github.com/user-attachments/assets/f51f2528-daea-4551-93de-46ff32969395
+
+
